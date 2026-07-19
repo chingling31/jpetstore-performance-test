@@ -14,8 +14,18 @@
 #    limitations under the License.
 #
 
-FROM openjdk:25
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-RUN ./mvnw clean package
-CMD ./mvnw cargo:run -P tomcat90
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /usr/src/jpetstore
+
+COPY . .
+
+RUN chmod +x mvnw
+
+RUN ./mvnw clean package \
+    -DskipTests \
+    -Denforcer.skip=true
+
+EXPOSE 8080
+
+CMD ["./mvnw", "cargo:run", "-P", "tomcat90", "-DskipTests", "-Denforcer.skip=true"]

@@ -10,3 +10,7 @@
 *.properties
 .env
 .github/keys/
+.vscode/
+*.backup
+.DS_Store
+*.log
