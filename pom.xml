@@ -167,6 +167,12 @@
     <artifactId>mysql-connector-j</artifactId>
     <version>9.3.0</version>
     </dependency>
+    
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>6.3.3</version>
+    </dependency>
 
     <!-- Due to osgi issue with mybatis spring, its required here for liberty -->
     <dependency>
