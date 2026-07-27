@@ -57,7 +57,7 @@
                     value="jpetstorepass"/>
 
         <property name="maximumPoolSize"
-                    value="10"/>
+                    value="20"/>
 
         <property name="minimumIdle"
                     value="5"/>
