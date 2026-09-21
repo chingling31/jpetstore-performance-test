@@ -41,23 +41,24 @@
     </bean>
     -->
     <bean id="dataSource"
-        class="org.apache.commons.dbcp2.BasicDataSource"
+        class="com.mchange.v2.c3p0.ComboPooledDataSource"
         destroy-method="close">
 
-        <property name="driverClassName"
+        <property name="driverClass"
                 value="com.mysql.cj.jdbc.Driver"/>
 
-        <property name="url"
+        <property name="jdbcUrl"
                 value="jdbc:mysql://mysql:3306/jpetstore?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8"/>
 
-        <property name="username"
+        <property name="user"
                 value="jpetstore"/>
 
         <property name="password"
                 value="jpetstorepass"/>
 
-        <property name="maxTotal" value="10"/>
-        <property name="minIdle" value="5"/>
+        <!-- C3P0 Pool -->
+        <property name="maxPoolSize" value="20"/>
+        <property name="minPoolSize" value="5"/>
 
     </bean>
 

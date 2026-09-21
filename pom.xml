@@ -175,6 +175,13 @@
       <version>2.13.0</version>
     </dependency>
 
+    <!-- C3P0 Connection Pool -->
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.5.5</version>
+    </dependency>
+
     <!-- Due to osgi issue with mybatis spring, its required here for liberty -->
     <dependency>
       <groupId>org.springframework.batch</groupId>
