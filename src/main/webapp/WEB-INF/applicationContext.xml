@@ -56,8 +56,9 @@
         <property name="password"
                 value="jpetstorepass"/>
 
-        <property name="maxTotal" value="10"/>
+        <property name="maxTotal" value="20"/>
         <property name="minIdle" value="5"/>
+        <property name="maxWaitMillis" value="30000"/>
 
     </bean>
 
