@@ -168,6 +168,13 @@
     <version>9.3.0</version>
     </dependency>
 
+    <!-- Apache Commons DBCP2 Connection Pool -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.13.0</version>
+    </dependency>
+
     <!-- Due to osgi issue with mybatis spring, its required here for liberty -->
     <dependency>
       <groupId>org.springframework.batch</groupId>
