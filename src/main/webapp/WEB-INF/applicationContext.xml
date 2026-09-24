@@ -41,8 +41,7 @@
     </bean>
     -->
     <bean id="dataSource"
-        class="org.apache.commons.dbcp2.BasicDataSource"
-        destroy-method="close">
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
         <property name="driverClassName"
                 value="com.mysql.cj.jdbc.Driver"/>
@@ -55,10 +54,6 @@
 
         <property name="password"
                 value="jpetstorepass"/>
-
-        <property name="maxTotal" value="10"/>
-        <property name="minIdle" value="5"/>
-
     </bean>
 
 
