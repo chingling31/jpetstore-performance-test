@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { check } from 'k6';
+import { check, sleep } from 'k6';
 
 const BASE_URL = 'http://localhost:8080/jpetstore';
 
@@ -74,4 +74,6 @@ export default function () {
 
     });
 
+    // 模擬使用者完成一次操作後等待 1 秒
+    sleep(1);
 }
