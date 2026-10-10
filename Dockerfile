@@ -22,9 +22,7 @@ COPY . .
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean package \
-    -DskipTests \
-    -Denforcer.skip=true
+RUN ./mvnw clean package -DskipTests -Denforcer.skip=true -Dmaven.gitcommitid.skip=true -Dlicense.skip=true
 
 EXPOSE 8080
 

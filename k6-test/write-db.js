@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { check } from 'k6';
+import { check, sleep } from 'k6';
 
 const BASE_URL = 'http://localhost:8080/jpetstore';
 
@@ -74,4 +74,5 @@ export default function () {
 
     });
 
+    sleep(0.1);
 }
